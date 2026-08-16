@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediCare - Medical Services</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>+</span> MediCare
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#medicines">Medicines</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#treatments">Treatments</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">Your Health, Our Priority</span>
+
+            <h1>
+                Quality Healthcare
+                <span>At Your Fingertips</span>
+            </h1>
+
+            <p>
+                Buy medicines, consult doctors and learn about
+                common treatments from one simple platform.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#doctors" class="primary-btn">
+                    Find a Doctor
+                </a>
+
+                <a href="#medicines" class="secondary-btn">
+                    Buy Medicine
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="doctor-icon">
+                👨‍⚕️
+            </div>
+
+            <h3>Need Medical Help?</h3>
+
+            <p>
+                Book an appointment with a qualified doctor.
+            </p>
+
+            <a href="#doctors">
+                View Doctors →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+        <div class="section-title">
+            <span>Our Services</span>
+            <h2>Everything You Need</h2>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Buy Medicines</h3>
+                <p>
+                    Browse commonly used medicines and add them
+                    to your cart.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">👨‍⚕️</div>
+                <h3>Find Doctors</h3>
+                <p>
+                    Explore doctors and check their available
+                    appointment schedules.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3>Basic Treatments</h3>
+                <p>
+                    Learn about symptoms, basic care and when
+                    professional help may be needed.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MEDICINES ================= -->
+
+    <section id="medicines" class="section">
+
+        <div class="section-title">
+            <span>Pharmacy</span>
+            <h2>Popular Medicines</h2>
+            <p>Browse and add medicines to your cart.</p>
+        </div>
+
+        <div class="medicine-grid">
+
+            <div class="medicine-card">
+
+                <div class="medicine-image">💊</div>
+
+                <h3>Paracetamol 500mg</h3>
+
+                <p>For fever and mild pain</p>
+
+                <div class="medicine-bottom">
+                    <strong>৳50</strong>
+
+                    <button onclick="addToCart('Paracetamol 500mg', 50)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="medicine-card">
+
+                <div class="medicine-image">💊</div>
+
+                <h3>Vitamin C</h3>
+
+                <p>Vitamin supplement</p>
+
+                <div class="medicine-bottom">
+                    <strong>৳120</strong>
+
+                    <button onclick="addToCart('Vitamin C', 120)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="medicine-card">
+
+                <div class="medicine-image">💊</div>
+
+                <h3>Antacid</h3>
+
+                <p>For occasional acidity</p>
+
+                <div class="medicine-bottom">
+                    <strong>৳80</strong>
+
+                    <button onclick="addToCart('Antacid', 80)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="medicine-card">
+
+                <div class="medicine-image">💊</div>
+
+                <h3>ORS</h3>
+
+                <p>Oral rehydration solution</p>
+
+                <div class="medicine-bottom">
+                    <strong>৳30</strong>
+
+                    <button onclick="addToCart('ORS', 30)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DOCTORS ================= -->
+
+    <section id="doctors" class="section doctors-section">
+
+        <div class="section-title">
+            <span>Medical Professionals</span>
+            <h2>Meet Our Doctors</h2>
+            <p>Choose a doctor and confirm an available schedule.</p>
+        </div>
+
+
+        <div class="doctor-grid">
+
+            <div class="doctor-card">
+
+                <div class="doctor-photo">👨‍⚕️</div>
+
+                <h3>Dr. Rahim Ahmed</h3>
+
+                <p class="speciality">General Physician</p>
+
+                <div class="doctor-info">
+                    ⭐ 4.9
+                    <span>Experience: 8 years</span>
+                </div>
+
+                <button
+                    class="appointment-btn"
+                    onclick="openAppointment('Dr. Rahim Ahmed')">
+                    Book Appointment
+                </button>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-photo">👩‍⚕️</div>
+
+                <h3>Dr. Nusrat Jahan</h3>
+
+                <p class="speciality">Internal Medicine</p>
+
+                <div class="doctor-info">
+                    ⭐ 4.8
+                    <span>Experience: 7 years</span>
+                </div>
+
+                <button
+                    class="appointment-btn"
+                    onclick="openAppointment('Dr. Nusrat Jahan')">
+                    Book Appointment
+                </button>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-photo">👨‍⚕️</div>
+
+                <h3>Dr. Tanvir Hasan</h3>
+
+                <p class="speciality">Cardiologist</p>
+
+                <div class="doctor-info">
+                    ⭐ 4.9
+                    <span>Experience: 10 years</span>
+                </div>
+
+                <button
+                    class="appointment-btn"
+                    onclick="openAppointment('Dr. Tanvir Hasan')">
+                    Book Appointment
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TREATMENTS ================= -->
+
+    <section id="treatments" class="section">
+
+        <div class="section-title">
+            <span>Health Information</span>
+            <h2>Basic Treatment Guide</h2>
+            <p>General information for common health problems.</p>
+        </div>
+
+
+        <div class="treatment-grid">
+
+            <div class="treatment-card">
+
+                <div class="treatment-icon">🌡️</div>
+
+                <h3>Fever</h3>
+
+                <p>
+                    Rest, drink enough fluids and monitor your
+                    temperature.
+                </p>
+
+                <button onclick="showTreatment('fever')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <div class="treatment-card">
+
+                <div class="treatment-icon">🤧</div>
+
+                <h3>Common Cold</h3>
+
+                <p>
+                    Rest and stay hydrated. Most common colds
+                    improve with time.
+                </p>
+
+                <button onclick="showTreatment('cold')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <div class="treatment-card">
+
+                <div class="treatment-icon">🤕</div>
+
+                <h3>Headache</h3>
+
+                <p>
+                    Rest, drink water and avoid known triggers.
+                </p>
+
+                <button onclick="showTreatment('headache')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <div class="treatment-card">
+
+                <div class="treatment-icon">🔥</div>
+
+                <h3>Minor Burns</h3>
+
+                <p>
+                    Cool the affected area with clean running
+                    water.
+                </p>
+
+                <button onclick="showTreatment('burn')">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>+</span> MediCare
+        </div>
+
+        <p>
+            Simple healthcare information and appointment services.
+        </p>
+
+        <small>
+            ©️ 2026 MediCare. For informational purposes only.
+        </small>
+
+    </footer>
+
+
+    <!-- ================= CART MODAL ================= -->
+
+    <div id="cart-modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeCart()">×</button>
+
+            <h2>Your Cart</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-total">
+                Total: ৳<span id="cart-total">0</span>
+            </div>
+
+            <button class="confirm-btn" onclick="checkout()">
+                Confirm Order
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= APPOINTMENT MODAL ================= -->
+
+    <div id="appointment-modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeAppointment()">×</button>
+
+            <h2>Book Appointment</h2>
+
+            <p id="selected-doctor"></p>
+
+            <label>Your Name</label>
+            <input type="text" id="patient-name" placeholder="Enter your name">
+
+            <label>Select Date</label>
+            <input type="date" id="appointment-date">
+
+            <label>Select Time</label>
+
+            <select id="appointment-time">
+                <option value="">Choose a time</option>
+                <option>10:00 AM</option>
+                <option>11:30 AM</option>
+                <option>02:00 PM</option>
+                <option>04:30 PM</option>
+                <option>06:00 PM</option>
+            </select>
+
+            <button class="confirm-btn" onclick="confirmAppointment()">
+                Confirm Appointment
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TREATMENT MODAL ================= -->
+
+    <div id="treatment-modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeTreatment()">×</button>
+
+            <h2 id="treatment-title"></h2>
+
+            <p id="treatment-description"></p>
+
+            <div class="warning">
+                ⚠️ This information is for general education only.
+                Consult a qualified healthcare professional for
+                diagnosis or treatment.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
